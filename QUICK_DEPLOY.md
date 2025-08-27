@@ -3,10 +3,11 @@
 ## ✅ Pre-deployment Checklist
 
 - [ ] Code is pushed to GitHub
-- [ ] `netlify.toml` file exists
+- [ ] `netlify.toml` file exists (with dependency conflict fixes)
 - [ ] `vercel.json` file exists
 - [ ] `package.json` has correct build scripts
 - [ ] Environment variables are ready
+- [ ] Build test passes locally (`npm run build`)
 
 ## 🌐 Frontend Deployment (Netlify)
 

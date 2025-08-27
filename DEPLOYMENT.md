@@ -185,6 +185,7 @@ After deploying both frontend and backend:
    - Check Node.js version (should be 18+)
    - Ensure all dependencies are in `package.json`
    - Check build logs for specific errors
+   - If you see dependency conflicts, the `netlify.toml` already includes `--legacy-peer-deps` flag
 
 2. **API calls fail:**
    - Verify the backend URL is correct
