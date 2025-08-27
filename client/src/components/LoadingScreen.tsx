@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import NexusLogo from "./NexusLogo";
+import OrnateLogo from "./OrnateLogo";
+import StylizedNexusText from "./StylizedNexusText";
 
 export default function LoadingScreen() {
   return (
@@ -12,12 +13,14 @@ export default function LoadingScreen() {
     >
       <div className="text-center">
         <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ scale: 0.8, opacity: 0, rotateY: 180 }}
+          animate={{ scale: 1, opacity: 1, rotateY: 0 }}
+          transition={{ duration: 1.2, ease: [0.68, -0.55, 0.265, 1.55] }}
           className="mb-8"
         >
-          <NexusLogo size="large" className="mx-auto shimmer-effect" />
+          <div className="perspective-1000 pulse-glow rounded-full p-4">
+            <OrnateLogo size="large" className="mx-auto floating-animation" />
+          </div>
         </motion.div>
         
         <motion.div
@@ -25,8 +28,8 @@ export default function LoadingScreen() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <h1 className="text-4xl font-bold text-nexus-gold mb-2">Nexus</h1>
-          <p className="text-gray-400">India's First Hybrid Social Network</p>
+          <StylizedNexusText size="large" animate className="mb-4" />
+          <p className="text-gray-400 text-xl">India's First Hybrid Social Network</p>
         </motion.div>
       </div>
     </motion.div>

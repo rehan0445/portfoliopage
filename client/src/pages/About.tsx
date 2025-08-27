@@ -18,11 +18,14 @@ export default function About() {
         
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal direction="left">
-            <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Modern collaborative workspace" 
-              className="rounded-2xl shadow-2xl shadow-nexus-gold/20" 
-            />
+            <div className="w-full h-96 bg-gradient-to-br from-nexus-gold/10 to-nexus-gold-dark/10 rounded-2xl shadow-2xl shadow-nexus-gold/20 flex items-center justify-center border border-nexus-gold/20">
+              <div className="text-center">
+                <div className="w-24 h-24 bg-gradient-to-br from-nexus-gold to-nexus-gold-dark rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-3xl font-bold text-nexus-dark">N</span>
+                </div>
+                <p className="text-nexus-gold font-semibold">Nexus Community</p>
+              </div>
+            </div>
           </ScrollReveal>
           
           <ScrollReveal direction="right" className="space-y-6">

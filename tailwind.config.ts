@@ -104,6 +104,25 @@ export default {
         progress: {
           'from': { width: '0%' },
           'to': { width: 'var(--progress-width)' }
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '50%': { transform: 'translateY(-20px) rotate(5deg)' }
+        },
+        'pulse-glow': {
+          '0%, 100%': { 
+            boxShadow: '0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.1)' 
+          },
+          '50%': { 
+            boxShadow: '0 0 30px rgba(212, 175, 55, 0.6), 0 0 60px rgba(212, 175, 55, 0.3)' 
+          }
+        },
+        'rotate-3d': {
+          '0%': { transform: 'perspective(1000px) rotateY(0deg) rotateX(0deg)' },
+          '25%': { transform: 'perspective(1000px) rotateY(90deg) rotateX(10deg)' },
+          '50%': { transform: 'perspective(1000px) rotateY(180deg) rotateX(0deg)' },
+          '75%': { transform: 'perspective(1000px) rotateY(270deg) rotateX(-10deg)' },
+          '100%': { transform: 'perspective(1000px) rotateY(360deg) rotateX(0deg)' }
         }
       },
       animation: {
@@ -114,7 +133,10 @@ export default {
         'slideInLeft': 'slideInLeft 1s ease-out forwards',
         'slideInRight': 'slideInRight 1s ease-out forwards',
         'scaleIn': 'scaleIn 0.8s ease-out forwards',
-        'progress': 'progress 2s ease-out forwards'
+        'progress': 'progress 2s ease-out forwards',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+        'rotate-3d': 'rotate-3d 20s linear infinite'
       },
     },
   },

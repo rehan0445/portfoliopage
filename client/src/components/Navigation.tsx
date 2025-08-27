@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import NexusLogo from "./NexusLogo";
+import OrnateLogo from "./OrnateLogo";
+import StylizedNexusText from "./StylizedNexusText";
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -30,8 +31,8 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
-              <NexusLogo size="small" />
-              <span className="text-xl font-bold text-nexus-gold">Nexus</span>
+              <OrnateLogo size="small" />
+              <StylizedNexusText size="small" />
             </Link>
             
             <div className="hidden md:flex space-x-8">
