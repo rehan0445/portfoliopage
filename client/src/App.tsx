@@ -12,6 +12,8 @@ import Features from "@/pages/Features";
 import Mission from "@/pages/Mission";
 import Reviews from "@/pages/Reviews";
 import Blog from "@/pages/Blog";
+import BlogPost1 from "@/pages/BlogPost1";
+import BlogPost2 from "@/pages/BlogPost2";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 
@@ -24,6 +26,8 @@ function Router() {
       <Route path="/mission" component={Mission} />
       <Route path="/reviews" component={Reviews} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/what-is-nexus" component={BlogPost1} />
+      <Route path="/blog/creative-ways-to-use-nexus" component={BlogPost2} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>

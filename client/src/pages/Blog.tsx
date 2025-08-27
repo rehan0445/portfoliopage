@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const blogPosts = [
@@ -6,13 +7,15 @@ const blogPosts = [
     title: "What is Nexus?",
     description: "Discover the story behind India's first hybrid social network. Learn why we built Nexus, how it works, and why meaningful conversations matter more than endless scrolling.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-    alt: "Digital networking and social connections"
+    alt: "Digital networking and social connections",
+    link: "/blog/what-is-nexus"
   },
   {
     title: "Creative Ways to Use Nexus",
     description: "From study buddy rooms to language practice circles, anime character chats to confession pages - explore innovative ways to connect, learn, and grow on Nexus.",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-    alt: "Creative collaboration and learning together"
+    alt: "Creative collaboration and learning together",
+    link: "/blog/creative-ways-to-use-nexus"
   }
 ];
 
@@ -37,12 +40,13 @@ export default function Blog() {
               delay={index * 0.3}
               direction={index % 2 === 0 ? "left" : "right"}
             >
-              <motion.div 
-                className="bg-nexus-dark rounded-2xl border border-nexus-gold/20 overflow-hidden hover:border-nexus-gold/50 transition-all duration-300 cursor-pointer group"
-                whileHover={{ scale: 1.02, y: -5 }}
-                transition={{ duration: 0.3 }}
-                data-testid={`blog-card-${index}`}
-              >
+              <Link href={post.link}>
+                <motion.div 
+                  className="bg-nexus-dark rounded-2xl border border-nexus-gold/20 overflow-hidden hover:border-nexus-gold/50 transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  data-testid={`blog-card-${index}`}
+                >
                 <div className="overflow-hidden">
                   <motion.img 
                     src={post.image} 
@@ -61,7 +65,8 @@ export default function Blog() {
                     Read More →
                   </span>
                 </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>

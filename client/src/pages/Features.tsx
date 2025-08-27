@@ -47,9 +47,10 @@ export default function Features() {
               key={feature.title} 
               delay={index * 0.2}
               direction="scale"
+              className="h-full"
             >
               <motion.div 
-                className="bg-nexus-dark p-8 rounded-2xl border border-nexus-gold/20 hover:border-nexus-gold/50 transition-all duration-300 group"
+                className="bg-nexus-dark p-8 rounded-2xl border border-nexus-gold/20 hover:border-nexus-gold/50 transition-all duration-300 group h-full flex flex-col"
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ duration: 0.3 }}
               >
