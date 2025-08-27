@@ -11,12 +11,6 @@ export default function Home() {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-black">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 parallax-bg"></div>
-      <div className="absolute top-20 left-20 w-2 h-2 bg-nexus-gold rounded-full floating-animation opacity-60"></div>
-      <div className="absolute top-40 right-32 w-1 h-1 bg-nexus-gold-light rounded-full floating-animation opacity-40" style={{animationDelay: '2s'}}></div>
-      <div className="absolute bottom-32 left-40 w-3 h-3 bg-nexus-gold rounded-full floating-animation opacity-30" style={{animationDelay: '4s'}}></div>
-      <div className="absolute bottom-20 right-20 w-1.5 h-1.5 bg-nexus-gold-light rounded-full floating-animation opacity-50" style={{animationDelay: '1s'}}></div>
       
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
         <motion.div
@@ -26,9 +20,7 @@ export default function Home() {
           className="mb-8"
           whileHover={{ scale: 1.1, rotateY: 15, rotateX: 5 }}
         >
-          <div className="perspective-1000 transform-style-3d pulse-glow rounded-full p-4">
-            <OrnateLogo size="large" className="mx-auto rotate-3d" />
-          </div>
+          <OrnateLogo size="large" className="mx-auto" />
         </motion.div>
         
         <motion.div
@@ -37,14 +29,11 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 4.2 }}
           className="mb-6"
         >
-          <div className="mb-6">
-            <StylizedNexusText size="large" animate className="mb-8" />
-            <h1 className="text-4xl md:text-5xl font-bold">
-              <span className="bg-gradient-to-r from-nexus-gold to-nexus-gold-light bg-clip-text text-transparent">
-                India's First Hybrid Social Network
-              </span>
-            </h1>
-          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-nexus-gold to-nexus-gold-light bg-clip-text text-transparent">
+              India's First Hybrid Social Network
+            </span>
+          </h1>
           <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Where Real Connection Begins — For Humans and AI Companions Alike
           </p>
@@ -57,7 +46,7 @@ export default function Home() {
         >
           <motion.button 
             onClick={handleWhatsAppRedirect}
-            className="bg-gradient-to-r from-nexus-gold to-nexus-gold-dark hover:from-nexus-gold-dark hover:to-nexus-gold text-nexus-dark px-12 py-4 rounded-full text-xl font-semibold relative overflow-hidden pulse-glow"
+            className="bg-gradient-to-r from-nexus-gold to-nexus-gold-dark hover:from-nexus-gold-dark hover:to-nexus-gold text-nexus-dark px-12 py-4 rounded-full text-xl font-semibold relative overflow-hidden"
             data-testid="join-nexus-button"
             whileHover={{ 
               scale: 1.05, 
