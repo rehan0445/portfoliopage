@@ -136,7 +136,7 @@ export default {
         'progress': 'progress 2s ease-out forwards',
         'float': 'float 6s ease-in-out infinite',
         'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
-        'rotate-3d': 'rotate-3d 20s linear infinite'
+        'rotate-3d': 'rotate-3d 12s linear infinite'
       },
     },
   },

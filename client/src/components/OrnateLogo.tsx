@@ -10,7 +10,7 @@ export default function OrnateLogo({ size = "medium", className }: OrnateLogoPro
   const sizeClasses = {
     small: "w-12 h-12",
     medium: "w-24 h-24", 
-    large: "w-32 h-32"
+    large: "w-40 h-40"
   };
 
   return (
