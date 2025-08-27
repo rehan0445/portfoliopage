@@ -25,8 +25,9 @@ export default function StylizedNexusText({
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
     textShadow: "0 0 30px rgba(212, 175, 55, 0.5)",
-    letterSpacing: "0.1em",
-    fontWeight: 700
+    letterSpacing: "0.05em",
+    fontWeight: 600,
+    fontStyle: "italic"
   };
 
   if (animate) {

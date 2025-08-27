@@ -20,7 +20,7 @@ export default function Home() {
           className="mb-8"
           whileHover={{ scale: 1.1, rotateY: 15, rotateX: 5 }}
         >
-          <OrnateLogo size="large" className="mx-auto" />
+          <OrnateLogo size="large" className="mx-auto rotate-3d" />
         </motion.div>
         
         <motion.div
