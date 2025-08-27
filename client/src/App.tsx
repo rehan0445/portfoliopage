@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useState, useEffect } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import Navigation from "@/components/Navigation";
+import BackgroundLogo from "@/components/BackgroundLogo";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Features from "@/pages/Features";
@@ -36,6 +37,7 @@ function Router() {
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [location] = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -45,13 +47,16 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  const showBgLogo = location !== "/";
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <div className="min-h-screen bg-nexus-dark text-white font-nexus">
+        <div className="min-h-screen bg-black text-white font-nexus">
           {isLoading && <LoadingScreen />}
           <Navigation />
+          {showBgLogo && <BackgroundLogo opacityClass="opacity-10" />}
           <Router />
         </div>
       </TooltipProvider>

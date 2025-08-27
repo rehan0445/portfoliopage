@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import OrnateLogo from "./OrnateLogo";
 import StylizedNexusText from "./StylizedNexusText";
+import nexusWordmark from "@assets/Screenshot 2025-08-27 220724.png";
 
 const navItems = [
   { path: "/", label: "Home" },
@@ -22,7 +23,7 @@ export default function Navigation() {
   return (
     <>
       <motion.nav
-        className="fixed top-0 w-full bg-nexus-dark/95 backdrop-blur-sm border-b border-nexus-gold/20 z-40"
+        className="fixed top-0 w-full bg-black/95 backdrop-blur-sm border-b border-nexus-gold/20 z-40"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 3.2 }}
@@ -31,8 +32,8 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
-              <OrnateLogo size="small" />
-              <StylizedNexusText size="small" />
+              <OrnateLogo size="small" className="rotate-3d" />
+              <img src={nexusWordmark} alt="Nexus" className="h-6 md:h-8 w-auto" />
             </Link>
             
             <div className="hidden md:flex space-x-8">
@@ -67,7 +68,7 @@ export default function Navigation() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-nexus-dark/95 backdrop-blur-sm z-50 md:hidden"
+            className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

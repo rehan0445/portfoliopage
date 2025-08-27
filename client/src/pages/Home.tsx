@@ -6,13 +6,13 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   const handleWhatsAppRedirect = () => {
-    window.open('https://wa.me/919574102202', '_blank');
+    window.open('https://chat.whatsapp.com/FIc1S7pMKdzGXvNaqeHPsO?mode=ems_share_c', '_blank');
   };
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-black">
       
-      <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.8, rotateY: 180 }}
           animate={{ opacity: 1, scale: 1, rotateY: 0 }}
@@ -29,12 +29,12 @@ export default function Home() {
           transition={{ duration: 0.8, delay: 4.2 }}
           className="mb-6"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-nexus-gold to-nexus-gold-light bg-clip-text text-transparent">
               India's First Hybrid Social Network
             </span>
           </h1>
-          <p className="text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
             Where Real Connection Begins — For Humans and AI Companions Alike
           </p>
         </motion.div>
@@ -46,7 +46,7 @@ export default function Home() {
         >
           <motion.button 
             onClick={handleWhatsAppRedirect}
-            className="bg-gradient-to-r from-nexus-gold to-nexus-gold-dark hover:from-nexus-gold-dark hover:to-nexus-gold text-nexus-dark px-12 py-4 rounded-full text-xl font-semibold relative overflow-hidden"
+            className="bg-gradient-to-r from-nexus-gold to-nexus-gold-dark hover:from-nexus-gold-dark hover:to-nexus-gold text-nexus-dark px-6 md:px-12 py-3 md:py-4 rounded-full text-lg md:text-xl font-semibold relative overflow-hidden whitespace-nowrap"
             data-testid="join-nexus-button"
             whileHover={{ 
               scale: 1.05, 

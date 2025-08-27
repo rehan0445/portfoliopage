@@ -2,12 +2,6 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedProgressBar from "@/components/AnimatedProgressBar";
 
-const testimonial = {
-  text: "Nexus has completely changed how I interact online. The AI companions feel genuinely helpful, and the human connections are more meaningful than anything I've experienced on other platforms. It's refreshing to have conversations that matter.",
-  author: "Arjun K.",
-  location: "Beta Tester, Mumbai"
-};
-
 const betaData = [
   { label: "Ease of Use", value: 87 },
   { label: "AI Conversation Quality", value: 91 },
@@ -65,23 +59,7 @@ export default function Reviews() {
             </div>
           </ScrollReveal>
           
-          <ScrollReveal direction="right">
-            <div className="bg-nexus-dark p-8 rounded-2xl border border-nexus-gold/20">
-              <h3 className="text-2xl font-bold text-nexus-gold mb-6">User Testimonial</h3>
-              <blockquote className="text-lg text-gray-300 italic leading-relaxed">
-                "{testimonial.text}"
-              </blockquote>
-              <div className="mt-6 flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-nexus-gold to-nexus-gold-dark rounded-full flex items-center justify-center mr-4">
-                  <span className="text-lg font-bold text-nexus-dark">A</span>
-                </div>
-                <div>
-                  <p className="text-nexus-gold font-semibold">{testimonial.author}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.location}</p>
-                </div>
-              </div>
-            </div>
-          </ScrollReveal>
+
         </div>
       </div>
     </section>

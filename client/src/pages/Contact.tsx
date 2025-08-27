@@ -161,18 +161,18 @@ export default function Contact() {
         <ScrollReveal className="mt-24">
           <div className="py-24 relative overflow-hidden rounded-2xl">
             <div className="absolute inset-0 bg-gradient-to-br from-nexus-gold/20 to-nexus-gold-dark/20"></div>
-            <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-              <h2 className="text-5xl md:text-6xl font-bold mb-8">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
                 <span className="bg-gradient-to-r from-nexus-gold to-nexus-gold-light bg-clip-text text-transparent">
                   Be Part of the Revolution
                 </span>
               </h2>
-              <p className="text-2xl text-gray-300 mb-12 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed px-4">
                 Join thousands of Indians who are already experiencing the future of social networking. Where real connections happen.
               </p>
               <Button 
-                onClick={() => window.open('https://wa.me/919574102202', '_blank')}
-                className="bg-gradient-to-r from-nexus-gold to-nexus-gold-dark hover:from-nexus-gold-dark hover:to-nexus-gold text-nexus-dark px-16 py-6 rounded-full text-2xl font-bold transform hover:scale-110 transition-all duration-300 shadow-2xl shadow-nexus-gold/50 relative overflow-hidden"
+                onClick={() => window.open('https://chat.whatsapp.com/FIc1S7pMKdzGXvNaqeHPsO?mode=ems_share_c', '_blank')}
+                className="bg-gradient-to-r from-nexus-gold to-nexus-gold-dark hover:from-nexus-gold-dark hover:to-nexus-gold text-nexus-dark px-6 md:px-16 py-4 md:py-6 rounded-full text-lg md:text-2xl font-bold transform hover:scale-110 transition-all duration-300 shadow-2xl shadow-nexus-gold/50 relative overflow-hidden whitespace-nowrap"
                 data-testid="whatsapp-cta-button"
               >
                 <span className="relative z-10">Join WhatsApp Community</span>
